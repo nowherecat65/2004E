@@ -27,7 +27,7 @@ style.innerHTML = `
   background-color: #7B2730;
 }
 #campaign_sign {
-    background-image: url("https://i.postimg.cc/D0CP08MB/o400gdt.png");
+    background-image: url("https://i.postimg.cc/nrWFskrh/o400gdt-1-2.png");
     background-size: cover;
     border-color: #EDE9E6;    
     border-width: .01em;
