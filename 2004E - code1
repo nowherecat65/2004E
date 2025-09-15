@@ -349,6 +349,9 @@ style.innerHTML = `
     #menu_container {
       background-color: #EDE9E6 !important;
     }
+          body {
+               background-image: url(https://i.postimg.cc/prQR0JGk/dfasdgsfsg.jpg);
+          }
   a:-webkit-any-link {
     color: #1A3C57;
   }
@@ -366,7 +369,7 @@ document.head.appendChild(style);
 
         $(".container")[0].style.backgroundColor = "#7b2730";
 
-document.body.background = "https://i.imgur.com/GBQ2QFW.png"
+
 
 HistHexcolour=["#4d6fc9","#d84b4b","#FFF62C","#00C100"];
         HistName=[" Howard Dean"," George W. Bush"," Michael Badnarik"," Ralph Nader"];
