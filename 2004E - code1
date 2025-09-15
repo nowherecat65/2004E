@@ -366,7 +366,7 @@ document.head.appendChild(style);
 
         $(".container")[0].style.backgroundColor = "#7b2730";
 
-        document.body.background = "https://i.postimg.cc/3xVk24S1/d.jpg"
+        document.body.background = "https://i.postimg.cc/HxHstQQw/10kBpCE.jpg"
 
 
 
