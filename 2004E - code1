@@ -349,9 +349,6 @@ style.innerHTML = `
     #menu_container {
       background-color: #EDE9E6 !important;
     }
-          body {
-               background-image: url(https://i.postimg.cc/prQR0JGk/dfasdgsfsg.jpg);
-          }
   a:-webkit-any-link {
     color: #1A3C57;
   }
@@ -368,6 +365,8 @@ document.head.appendChild(style);
         $("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
 
         $(".container")[0].style.backgroundColor = "#7b2730";
+
+        document.body.background = "https://i.postimg.cc/3xVk24S1/d.jpg"
 
 
 
