@@ -249,76 +249,11 @@ musicMode = () => {
   
   }
   
-// NEW: Add alternate color scheme (integrated from 1976/1876 files)
-campaignTrail_temp.bunnyhop = true;
-function addColor() {
-    var difficultyDiv = document.getElementById("difficulty_level");
-    if (difficultyDiv && !document.getElementById("colour")) {  // Check for checkbox instead of dropdown
-        // NEW: Alternate color scheme checkbox (isolated and integrated)
-        var colourForm = document.createElement("form");
-        colourForm.name = "colour_selection";
-        var colourHeader = document.createElement("h3");
-        colourHeader.textContent = "Enable alternate colour scheme?";
-        colourForm.appendChild(colourHeader);
-        var colourCheckbox = document.createElement("input");
-        colourCheckbox.type = "checkbox";
-        colourCheckbox.id = "colour";
-        colourCheckbox.checked = false;
-        colourForm.appendChild(colourCheckbox);
-        difficultyDiv.appendChild(colourForm);
-
-colourCheckbox.addEventListener("change", function() {
-    if (this.checked) {
-        // Alternate scheme (customize these hex values as needed)
-        campaignTrail_temp.candidate_json[0].fields.color_hex = "#F3B21A";
-        campaignTrail_temp.candidate_json[0].fields.secondary_color_hex = "#FAD7A0";  // Light yellow-gold secondary
-        campaignTrail_temp.candidate_json[1].fields.color_hex = "#2E7DB8";
-        campaignTrail_temp.candidate_json[1].fields.secondary_color_hex = "#A0C4E0";  // Light blue secondary
-        campaignTrail_temp.candidate_json[2].fields.color_hex = "#7D5CFF";  // Third-party (e.g., Libertarian)
-        campaignTrail_temp.candidate_json[2].fields.secondary_color_hex = "#C0B0FF";  // Light purple secondary
-    } else {
-        // Reset to match your mod's JSON defaults (use the actual values from candidate_json parse)
-        campaignTrail_temp.candidate_json[0].fields.color_hex = "#4d6fc9";  // Dem primary (from HistHexcolour)
-        campaignTrail_temp.candidate_json[0].fields.secondary_color_hex = "#90C0FF";  // Standard Dem secondary
-        campaignTrail_temp.candidate_json[1].fields.color_hex = "#d84b4b";  // Rep primary (from HistHexcolour)
-        campaignTrail_temp.candidate_json[1].fields.secondary_color_hex = "#FFA0A0";  // Standard Rep secondary
-        if (campaignTrail_temp.candidate_json[2]) {  // Optional: Handle third-party
-            campaignTrail_temp.candidate_json[2].fields.color_hex = "#FFF62C";  // Yellow
-            campaignTrail_temp.candidate_json[2].fields.secondary_color_hex = "#FFFFC0";
-        }
-    }
-});
-        var difficultyForm = document.querySelector('form[name="difficulty_level_selection"]');
-        var difficultyHeader = difficultyForm.querySelector('h3');
-        difficultyHeader.textContent = "Select campaign difficulty:";
-
-        var forms = document.querySelectorAll("#difficulty_level form");
-        for (var i = 0; i < forms.length; i++) {
-          forms[i].style.display = "inline-block";
-          forms[i].style.paddingLeft = "10px"; // adjust the value as needed
-          forms[i].style.paddingRight = "10px"; // adjust the value as needed
-        }
-    }
-}
-// NEW: Observer wrapper (from 1876/1976) to run addColor after DOM loads
-if(!campaignTrail_temp.observer){
-    campaignTrail_temp.observer = true
-    // Define the MutationObserver
-    let masterObserver = new MutationObserver(masterFunction);
-    function masterFunction() {
-        masterObserver.disconnect();
-        addColor();  // Run the color scheme setup
-        masterObserver.observe(document.body, { childList: true, subtree: true });
-    }
-    // Start observing the document with the master observer
-    masterObserver.observe(document.body, { childList: true, subtree: true });
-}
-
     $("#game_start").click((event) => {
       event.preventDefault();
       $("#election_id_button").click((event) => {
           musicMode()
-
+  
           setInterval(changeFontColour, 200)
     
       })
@@ -482,6 +417,5 @@ appendStyle();
     var el = document.getElementById('ed_desc');
     el.innerHTML = "<p>The mill worker’s son, the working-man’s liberal populist, the moderate, the Senator, the best personal-injury lawyer in the country, the bereaved father, the vain millionaire. Johnny Reid Edwards is a lot of things to a lot of different people, but he can add another to the list: the Democratic nominee for president in 2004.</p><p>All those chameleon-like identities sit side by side. On the trail he talks about “Two Americas,” one for the well-connected and one for families living paycheck to paycheck, and he keeps the focus chiefly on kitchen-table economics. While at home, he kicks back, living in luxury in a great mansion, with millions in the bank. The irony doesn’t faze him.<br><br><button onclick='ed_next0()'>More</button></p>";
   };
-
 
 
