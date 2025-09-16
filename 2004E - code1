@@ -267,18 +267,27 @@ function addColor() {
         colourForm.appendChild(colourCheckbox);
         difficultyDiv.appendChild(colourForm);
 
-        colourCheckbox.addEventListener("change", function() {
-            if (this.checked) {
-    			campaignTrail_temp.candidate_json[0].fields.color_hex = "#F3B21A";
-    			campaignTrail_temp.candidate_json[1].fields.color_hex = "#2E7DB8";
-    			campaignTrail_temp.candidate_json[2].fields.color_hex = "#7D5CFF";
-            } else {
-                // Reset to 2004 defaults
-    			campaignTrail_temp.candidate_json[0].fields.color_hex = "#1762D5";
-    			campaignTrail_temp.candidate_json[1].fields.color_hex = "#B9151C";
-            }
-        });
-
+colourCheckbox.addEventListener("change", function() {
+    if (this.checked) {
+        // Alternate scheme (customize these hex values as needed)
+        campaignTrail_temp.candidate_json[0].fields.color_hex = "#F3B21A";
+        campaignTrail_temp.candidate_json[0].fields.secondary_color_hex = "#FAD7A0";  // Light yellow-gold secondary
+        campaignTrail_temp.candidate_json[1].fields.color_hex = "#2E7DB8";
+        campaignTrail_temp.candidate_json[1].fields.secondary_color_hex = "#A0C4E0";  // Light blue secondary
+        campaignTrail_temp.candidate_json[2].fields.color_hex = "#7D5CFF";  // Third-party (e.g., Libertarian)
+        campaignTrail_temp.candidate_json[2].fields.secondary_color_hex = "#C0B0FF";  // Light purple secondary
+    } else {
+        // Reset to match your mod's JSON defaults (use the actual values from candidate_json parse)
+        campaignTrail_temp.candidate_json[0].fields.color_hex = "#4d6fc9";  // Dem primary (from HistHexcolour)
+        campaignTrail_temp.candidate_json[0].fields.secondary_color_hex = "#90C0FF";  // Standard Dem secondary
+        campaignTrail_temp.candidate_json[1].fields.color_hex = "#d84b4b";  // Rep primary (from HistHexcolour)
+        campaignTrail_temp.candidate_json[1].fields.secondary_color_hex = "#FFA0A0";  // Standard Rep secondary
+        if (campaignTrail_temp.candidate_json[2]) {  // Optional: Handle third-party
+            campaignTrail_temp.candidate_json[2].fields.color_hex = "#FFF62C";  // Yellow
+            campaignTrail_temp.candidate_json[2].fields.secondary_color_hex = "#FFFFC0";
+        }
+    }
+});
         var difficultyForm = document.querySelector('form[name="difficulty_level_selection"]');
         var difficultyHeader = difficultyForm.querySelector('h3');
         difficultyHeader.textContent = "Select campaign difficulty:";
