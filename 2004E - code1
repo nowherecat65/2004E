@@ -272,7 +272,7 @@ campaignTrail_temp.opponents_weighted_json = JSON.parse("[{\"election\": 20, \"c
 
 campaignTrail_temp.temp_election_list = [{"id": 9, "year": 2004, "is_premium": 0, "display_year": "2004e"}];
 campaignTrail_temp.credits = '.theanswerisme';
-document.getElementById("header").src = "https://i.postimg.cc/CKGZnWbr/TGWo-FF8-best.png"
+document.getElementById("header").src = "https://i.postimg.cc/s24hsh4n/edwards04-banenr-new.webp"
 
 let style = document.createElement('style');
 style.type = 'text/css';
