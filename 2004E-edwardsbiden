@@ -9500,7 +9500,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 8918,
             "candidate": 78,
-            "answer_feedback": "You finish your victory speech in a white dress shirt with your sleeves rolled up, your mop of brown hair catching the camera flashes as reporters take photo after photo. To some on your team, your focus on the inequality of the tax code feels less confrontational than they expected. Soon the major papers are calling you the emerging frontrunner, your polls are surging, and donations to your campaign are skyrocketing."
+            "answer_feedback": "You finish your victory speech in a windbreaker, your boyish quiff framing your face as reporters take photo after photo. The New York Times soon writes about you as the second coming of William Jennings Bryan, a man who came from nowhere to seize the Democratic nomination on a populist platform -- Your numbers surge, and your campaign coffers start to fill."
         }
     },
     {
@@ -9509,7 +9509,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 8924,
             "candidate": 78,
-            "answer_feedback": "Enter feedback text here"
+            "answer_feedback": "You finish your victory speech in a white dress shirt with your sleeves rolled up, your mop of brown hair catching the camera flashes as reporters take photo after photo. To some on your team, your focus on the inequality of the tax code feels less confrontational than they expected. Soon the major papers are calling you the emerging frontrunner, your polls are surging, and donations to your campaign are skyrocketing."
         }
     }
 ]
