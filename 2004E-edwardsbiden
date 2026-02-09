@@ -11,7 +11,7 @@ campaignTrail_temp.questions_json = [
         "pk": 353,
         "fields": {
             "priority": 0,
-            "description": "Congratulations, John! You are sipping a cold Diet Coke, with your wife, Elizabeth, nearby, and you are preparing your nomination speech for the Democratic National Convention in Cincinnati, Ohio. What would you like to say to the national audience?",
+            "description": "Congratulations, John, you’ve done it! You’re sipping a cold Diet Coke with your wife, Elizabeth, nearby, and you’re preparing your nomination speech for the Democratic National Convention in Cincinnati, Ohio. What would you like to say to the national audience?",
             "likelihood": 1
         }
     },
